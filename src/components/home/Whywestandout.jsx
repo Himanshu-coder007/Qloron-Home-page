@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhyWeStandOut = () => {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto bg-white">
+    <section className="py-16 px-4 max-w-7xl mx-auto bg-gradient-to-br from-gray-50 to-green-50">
       <div className="text-center mb-16">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Why We Stand Out From Others</h2>
         <h3 className="text-2xl text-green-600 font-semibold">HOW WE WORK</h3>
@@ -10,148 +10,148 @@ const WhyWeStandOut = () => {
 
       <div className="relative">
         {/* Tree trunk - hidden on mobile */}
-        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-amber-800"></div>
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-amber-700 to-amber-900 rounded-full"></div>
 
         {/* Branches - alternating left and right on desktop, stacked on mobile */}
         <div className="space-y-12 md:space-y-24">
           {/* Item 1 */}
           <div className="relative flex flex-col md:flex-row md:justify-end">
-            <div className="w-full md:w-[45%] md:pr-24">
+            <div className="w-full md:w-[45%] md:pr-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-green-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">1</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-700 text-white font-bold text-xl mr-4 shadow-md">1</div>
                 <h4 className="text-xl font-bold text-gray-800">Expertise & Experience</h4>
               </div>
               <p className="text-gray-600">
                 We bring a wealth of expertise and years of experience in the industry, ensuring that we deliver top-notch solutions tailored to your unique business needs.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
           </div>
 
           {/* Item 2 */}
           <div className="relative flex flex-col md:flex-row md:justify-start">
-            <div className="w-full md:w-[45%] md:pl-24">
+            <div className="w-full md:w-[45%] md:pl-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">2</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-white font-bold text-xl mr-4 shadow-md">2</div>
                 <h4 className="text-xl font-bold text-gray-800">Customized Solutions</h4>
               </div>
               <p className="text-gray-600">
                 We understand that every business is unique. Our team works closely with you to understand your requirements and provide customized solutions that align with your goals and objectives.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
           </div>
 
           {/* Item 3 */}
           <div className="relative flex flex-col md:flex-row md:justify-end">
-            <div className="w-full md:w-[45%] md:pr-24">
+            <div className="w-full md:w-[45%] md:pr-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-purple-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">3</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 text-white font-bold text-xl mr-4 shadow-md">3</div>
                 <h4 className="text-xl font-bold text-gray-800">Skilled Team</h4>
               </div>
               <p className="text-gray-600">
                 Our team comprises highly skilled professionals who are experts in their respective fields. They stay updated with the latest industry trends and technologies to deliver cutting-edge solutions.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
           </div>
 
           {/* Item 4 */}
           <div className="relative flex flex-col md:flex-row md:justify-start">
-            <div className="w-full md:w-[45%] md:pl-24">
+            <div className="w-full md:w-[45%] md:pl-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-red-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">4</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-700 text-white font-bold text-xl mr-4 shadow-md">4</div>
                 <h4 className="text-xl font-bold text-gray-800">Quality & Precision</h4>
               </div>
               <p className="text-gray-600">
                 We have strong focus on delivering high-quality solutions. Our rigorous quality assurance processes ensure that the end product meets the highest standards of performance, functionality, and security.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
           </div>
 
           {/* Item 5 */}
           <div className="relative flex flex-col md:flex-row md:justify-end">
-            <div className="w-full md:w-[45%] md:pr-24">
+            <div className="w-full md:w-[45%] md:pr-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-yellow-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">5</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-700 text-white font-bold text-xl mr-4 shadow-md">5</div>
                 <h4 className="text-xl font-bold text-gray-800">Timely Delivery</h4>
               </div>
               <p className="text-gray-600">
                 We value your time and understand the importance of meeting deadlines. Our team is committed to delivering projects on time, ensuring that you can launch and implement your solutions without delay.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
           </div>
 
           {/* Item 6 */}
           <div className="relative flex flex-col md:flex-row md:justify-start">
-            <div className="w-full md:w-[45%] md:pl-24">
+            <div className="w-full md:w-[45%] md:pl-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-indigo-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">6</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-700 text-white font-bold text-xl mr-4 shadow-md">6</div>
                 <h4 className="text-xl font-bold text-gray-800">Competitive Pricing</h4>
               </div>
               <p className="text-gray-600">
                 We offer competitive pricing structures to provide you with the best value for your investment. Our cost-effective solutions help you optimize your budget without compromising on quality.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
           </div>
 
           {/* Item 7 */}
           <div className="relative flex flex-col md:flex-row md:justify-end">
-            <div className="w-full md:w-[45%] md:pr-24">
+            <div className="w-full md:w-[45%] md:pr-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-pink-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">7</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-pink-700 text-white font-bold text-xl mr-4 shadow-md">7</div>
                 <h4 className="text-xl font-bold text-gray-800">Client-Centric Approach</h4>
               </div>
               <p className="text-gray-600">
                 Your satisfaction is our priority. We tailor our services to your specific needs and maintain open communication throughout the project lifecycle.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
           </div>
 
           {/* Item 8 */}
           <div className="relative flex flex-col md:flex-row md:justify-start">
-            <div className="w-full md:w-[45%] md:pl-24">
+            <div className="w-full md:w-[45%] md:pl-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-teal-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">8</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-teal-700 text-white font-bold text-xl mr-4 shadow-md">8</div>
                 <h4 className="text-xl font-bold text-gray-800">Long-Term Partnership</h4>
               </div>
               <p className="text-gray-600">
                 We believe in building long-term relationships with our clients. Our goal is to become your trusted technology partner, supporting your growth and providing ongoing support and maintenance.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
           </div>
 
           {/* Item 9 */}
           <div className="relative flex flex-col md:flex-row md:justify-end">
-            <div className="w-full md:w-[45%] md:pr-24">
+            <div className="w-full md:w-[45%] md:pr-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-orange-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">9</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 text-white font-bold text-xl mr-4 shadow-md">9</div>
                 <h4 className="text-xl font-bold text-gray-800">Positive Track Record</h4>
               </div>
               <p className="text-gray-600">
                 Our track record speaks for itself. We have a history of successful projects and satisfied clients who have achieved their business goals with our assistance.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
           </div>
 
           {/* Item 10 */}
           <div className="relative flex flex-col md:flex-row md:justify-start">
-            <div className="w-full md:w-[45%] md:pl-24">
+            <div className="w-full md:w-[45%] md:pl-24 p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-cyan-500">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-green-600 text-white font-bold text-xl mr-4">10</div>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-700 text-white font-bold text-xl mr-4 shadow-md">10</div>
                 <h4 className="text-xl font-bold text-gray-800">Project Completion</h4>
               </div>
               <p className="text-gray-600">
                 The project is completed and we give it to our customer. We also ask for customer's feedback to continuously improve our services.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-amber-800"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
           </div>
         </div>
       </div>

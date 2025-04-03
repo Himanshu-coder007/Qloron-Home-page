@@ -10,7 +10,7 @@ const ServicesSlider = ({ services }) => {
     if (isAutoPlaying) {
       interval = setInterval(() => {
         setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1));
-      }, 3000);
+      }, 5000); // Increased interval for better viewing
     }
     return () => clearInterval(interval);
   }, [isAutoPlaying, services.length]);
@@ -18,21 +18,24 @@ const ServicesSlider = ({ services }) => {
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === services.length - 1 ? 0 : prev + 1));
     setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000); // Resume auto-play after pause
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? services.length - 1 : prev - 1));
     setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000); // Resume auto-play after pause
   };
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000); // Resume auto-play after pause
   };
 
   return (
-    <div className="relative overflow-hidden rounded-xl shadow-lg bg-white">
-      <div className="relative h-80">
+    <div className="relative overflow-hidden rounded-xl shadow-2xl">
+      <div className="relative h-96"> {/* Increased height for better visibility */}
         {services.map((service, index) => (
           <ServiceCard 
             key={index}
@@ -44,7 +47,7 @@ const ServicesSlider = ({ services }) => {
 
       <button 
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md z-10"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg z-10 transition-all hover:scale-110"
         aria-label="Previous slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -53,7 +56,7 @@ const ServicesSlider = ({ services }) => {
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md z-10"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg z-10 transition-all hover:scale-110"
         aria-label="Next slide"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,12 +64,12 @@ const ServicesSlider = ({ services }) => {
         </svg>
       </button>
 
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+      <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2">
         {services.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${index === currentSlide ? 'bg-cyan-500' : 'bg-gray-300'}`}
+            className={`w-3 h-3 rounded-full transition-all ${index === currentSlide ? 'bg-white scale-125' : 'bg-white/50'}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
