@@ -7,6 +7,7 @@ import Careers from './pages/Careers';
 import Contacts from './pages/Contacts';
 import Portfolio from './pages/Portfolio';
 import Homepage from './pages/Homepage';
+import Aboutus from './pages/Aboutus';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="careers" element={<Careers />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="portfolio" element={<Portfolio />} />
+          <Route path="about" element={<Aboutus />} />
         </Route>
       </Routes>
     </BrowserRouter>

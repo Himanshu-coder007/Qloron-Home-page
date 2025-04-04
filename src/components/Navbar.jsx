@@ -4,9 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const aboutRef = useRef(null);
   const servicesRef = useRef(null);
-  const aboutButtonRef = useRef(null);
   const servicesButtonRef = useRef(null);
   const navigate = useNavigate();
 
@@ -17,10 +15,8 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        (aboutRef.current && !aboutRef.current.contains(event.target) && 
-         aboutButtonRef.current && !aboutButtonRef.current.contains(event.target)) &&
-        (servicesRef.current && !servicesRef.current.contains(event.target) && 
-         servicesButtonRef.current && !servicesButtonRef.current.contains(event.target))
+        servicesRef.current && !servicesRef.current.contains(event.target) && 
+        servicesButtonRef.current && !servicesButtonRef.current.contains(event.target)
       ) {
         setOpenDropdown(null);
       }
@@ -57,30 +53,9 @@ const Navbar = () => {
             <Link to="/">HOME</Link>
           </li>
           
-          {/* About Us Dropdown */}
-          <li className="relative">
-            <button 
-              ref={aboutButtonRef}
-              onClick={() => toggleDropdown('about')}
-              className="hover:text-cyan-500 cursor-pointer font-medium flex items-center gap-1"
-            >
-              ABOUT US ▼
-            </button>
-            
-            {openDropdown === 'about' && (
-              <div 
-                ref={aboutRef}
-                className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200"
-              >
-                <button onClick={() => handleNavigation('/about/company')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Company</button>
-                <button onClick={() => handleNavigation('/about/who-we-are')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Who we are</button>
-                <button onClick={() => handleNavigation('/about/leadership')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Leadership</button>
-                <button onClick={() => handleNavigation('/about/partners')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Partners</button>
-                <button onClick={() => handleNavigation('/about/csr')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Corporate Social Responsibility</button>
-                <button onClick={() => handleNavigation('/about/locations')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Locations</button>
-                <button onClick={() => handleNavigation('/about/security')} className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Security and Trust</button>
-              </div>
-            )}
+          {/* About Us Link */}
+          <li className="hover:text-cyan-500 cursor-pointer font-medium">
+            <Link to="/about">ABOUT US</Link>
           </li>
 
           {/* Services & Support Dropdown */}
