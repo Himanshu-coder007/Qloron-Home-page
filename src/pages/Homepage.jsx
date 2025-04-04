@@ -30,11 +30,39 @@ const Homepage = () => {
       bgColor: "bg-gradient-to-r from-indigo-500 to-blue-700"
     },
     {
-      title: "CRM & CX",
+      title: "CRM & Customer Experience",
       description: "Customer relationship management and experience solutions",
       link: "/services/crm",
       icon: "🤝",
       bgColor: "bg-gradient-to-r from-green-500 to-teal-500"
+    },
+    {
+      title: "Spend Management",
+      description: "Optimize and control your business expenditures",
+      link: "/services/spend-management",
+      icon: "💰",
+      bgColor: "bg-gradient-to-r from-blue-500 to-indigo-600"
+    },
+    {
+      title: "Human Capital Management",
+      description: "Comprehensive HR solutions for your workforce",
+      link: "/services/hcm",
+      icon: "👥",
+      bgColor: "bg-gradient-to-r from-purple-600 to-blue-600"
+    },
+    {
+      title: "Financial Support",
+      description: "Expert financial services and consulting",
+      link: "/services/financial-support",
+      icon: "💳",
+      bgColor: "bg-gradient-to-r from-green-600 to-blue-500"
+    },
+    {
+      title: "Web Hosting",
+      description: "Reliable and secure hosting solutions",
+      link: "/services/web-hosting",
+      icon: "🖥️",
+      bgColor: "bg-gradient-to-r from-red-500 to-orange-500"
     },
     {
       title: "Web Development",
@@ -49,6 +77,20 @@ const Homepage = () => {
       link: "/services/app-development",
       icon: "📱",
       bgColor: "bg-gradient-to-r from-yellow-500 to-amber-500"
+    },
+    {
+      title: "Digital Marketing",
+      description: "Boost your online presence and engagement",
+      link: "/services/digital-marketing",
+      icon: "📢",
+      bgColor: "bg-gradient-to-r from-pink-500 to-rose-500"
+    },
+    {
+      title: "Data Export",
+      description: "Secure and efficient data migration services",
+      link: "/services/data-export",
+      icon: "📊",
+      bgColor: "bg-gradient-to-r from-teal-500 to-green-500"
     }
   ];
 

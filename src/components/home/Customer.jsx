@@ -8,7 +8,10 @@ const Customer = () => {
     "https://qloron.com/assets/htc-DgjayR_U.png",
     "https://qloron.com/assets/TATAIQ-0cS15RmV.png",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvJR2kXDKfDvF375gumKuvo-YI4Nc8XAZ39w&s",
-    "https://supersourcing.com/blog/wp-content/uploads/2019/08/supersourcing-poster.png"
+    "https://supersourcing.com/blog/wp-content/uploads/2019/08/supersourcing-poster.png",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBTkKWK3O8JrhEATEmbuC8oYD_KLE88svTAw&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPiXs0yQYc6Dyb4BUYNfoqadXuTjFHIVCEA&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCuDOUChkGJZ_iADO3JEU39qhb98IXvVq_yA&s"
   ];
 
   // Duplicate the logos array for seamless looping

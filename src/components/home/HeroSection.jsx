@@ -3,7 +3,7 @@ import React from 'react';
 const HeroSection = () => {
   return (
     <section 
-      className="relative min-h-[500px] flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         backgroundImage: "url('https://thumbs.dreamstime.com/b/high-rise-corporate-office-d-background-room-panoramic-city-view-floor-to-ceiling-windows-sleek-executive-desk-364275033.jpg')",
         backgroundSize: 'cover',
