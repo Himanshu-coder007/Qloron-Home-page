@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhyWeStandOut = () => {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto bg-gradient-to-br from-gray-50 to-green-50">
+    <section className="py-16 px-4 max-w-7xl mx-auto bg-white">
       <div className="text-center mb-16">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">Why We Stand Out From Others</h2>
         <h3 className="text-2xl text-green-600 font-semibold">HOW WE WORK</h3>
@@ -10,7 +10,7 @@ const WhyWeStandOut = () => {
 
       <div className="relative">
         {/* Tree trunk - hidden on mobile */}
-        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-amber-700 to-amber-900 rounded-full"></div>
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-2 h-full bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-full"></div>
 
         {/* Branches - alternating left and right on desktop, stacked on mobile */}
         <div className="space-y-12 md:space-y-24">
@@ -25,7 +25,7 @@ const WhyWeStandOut = () => {
                 We bring a wealth of expertise and years of experience in the industry, ensuring that we deliver top-notch solutions tailored to your unique business needs.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
           </div>
 
           {/* Item 2 */}
@@ -39,7 +39,7 @@ const WhyWeStandOut = () => {
                 We understand that every business is unique. Our team works closely with you to understand your requirements and provide customized solutions that align with your goals and objectives.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-yellow-400 to-yellow-600"></div>
           </div>
 
           {/* Item 3 */}
@@ -53,7 +53,7 @@ const WhyWeStandOut = () => {
                 Our team comprises highly skilled professionals who are experts in their respective fields. They stay updated with the latest industry trends and technologies to deliver cutting-edge solutions.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
           </div>
 
           {/* Item 4 */}
@@ -67,7 +67,7 @@ const WhyWeStandOut = () => {
                 We have strong focus on delivering high-quality solutions. Our rigorous quality assurance processes ensure that the end product meets the highest standards of performance, functionality, and security.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-yellow-400 to-yellow-600"></div>
           </div>
 
           {/* Item 5 */}
@@ -81,7 +81,7 @@ const WhyWeStandOut = () => {
                 We value your time and understand the importance of meeting deadlines. Our team is committed to delivering projects on time, ensuring that you can launch and implement your solutions without delay.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
           </div>
 
           {/* Item 6 */}
@@ -95,7 +95,7 @@ const WhyWeStandOut = () => {
                 We offer competitive pricing structures to provide you with the best value for your investment. Our cost-effective solutions help you optimize your budget without compromising on quality.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-yellow-400 to-yellow-600"></div>
           </div>
 
           {/* Item 7 */}
@@ -109,7 +109,7 @@ const WhyWeStandOut = () => {
                 Your satisfaction is our priority. We tailor our services to your specific needs and maintain open communication throughout the project lifecycle.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
           </div>
 
           {/* Item 8 */}
@@ -123,7 +123,7 @@ const WhyWeStandOut = () => {
                 We believe in building long-term relationships with our clients. Our goal is to become your trusted technology partner, supporting your growth and providing ongoing support and maintenance.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-yellow-400 to-yellow-600"></div>
           </div>
 
           {/* Item 9 */}
@@ -137,7 +137,7 @@ const WhyWeStandOut = () => {
                 Our track record speaks for itself. We have a history of successful projects and satisfied clients who have achieved their business goals with our assistance.
               </p>
             </div>
-            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute left-1/2 top-6 h-1 w-24 bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
           </div>
 
           {/* Item 10 */}
@@ -151,7 +151,7 @@ const WhyWeStandOut = () => {
                 The project is completed and we give it to our customer. We also ask for customer's feedback to continuously improve our services.
               </p>
             </div>
-            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-amber-700 to-amber-900"></div>
+            <div className="hidden md:block absolute right-1/2 top-6 h-1 w-24 bg-gradient-to-l from-yellow-400 to-yellow-600"></div>
           </div>
         </div>
       </div>
