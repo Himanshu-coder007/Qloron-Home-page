@@ -2,6 +2,8 @@ import React from "react";
 import Info from "../components/about/Info";
 import { FaLightbulb, FaUsers, FaChartLine, FaHandshake } from "react-icons/fa";
 import Principles from "../components/about/Principles";
+import Team from "../components/about/Team";
+import Projects from "../components/about/Projexts";
 
 const Aboutus = () => {
   return (
@@ -109,6 +111,12 @@ const Aboutus = () => {
 
       {/* New Objectives Section */}
       <Principles/>
+
+      {/* Teams section */}
+      <Team/>
+
+      {/* Projects section */}
+     <Projects/>
     </div>
   );
 };
