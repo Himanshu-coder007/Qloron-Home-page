@@ -28,7 +28,7 @@ const Contacts = () => {
       {/* Full-width top image */}
       <div className="w-full mb-8">
         <img 
-          src="https://media.istockphoto.com/id/1311934969/photo/contact-us.jpg?s=612x612&w=0&k=20&c=_vmYyAX0aFi-sHH8eYS-tLLNfs1ZWXnNB8M7_KWwhgg=" 
+          src="contact.jpg" 
           alt="Contact us header"
           className="w-full h-auto object-cover"
           style={{ maxHeight: '400px' }}

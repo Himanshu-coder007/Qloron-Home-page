@@ -1,6 +1,6 @@
 import React from 'react';
 
-const JobOpeningCard = ({ title, type, location, experience, description, onViewDetails }) => {
+const JobOpeningCard = ({ title, type, location, experience, description, onViewDetails, onApply }) => {
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
       <div className="p-6">
@@ -21,14 +21,22 @@ const JobOpeningCard = ({ title, type, location, experience, description, onView
           </div>
         </div>
         
-        <p className="text-gray-600 mb-4">{description}</p>
+        <p className="text-gray-600 mb-6">{description}</p>
         
-        <button
-          onClick={onViewDetails}
-          className="text-blue-600 hover:text-blue-800 font-medium"
-        >
-          Apply →
-        </button>
+        <div className="flex space-x-3">
+          <button
+            onClick={onViewDetails}
+            className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50 font-medium"
+          >
+            View Details
+          </button>
+          <button
+            onClick={onApply}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 font-medium"
+          >
+            Apply Now
+          </button>
+        </div>
       </div>
     </div>
   );

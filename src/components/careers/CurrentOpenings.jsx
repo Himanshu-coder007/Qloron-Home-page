@@ -4,6 +4,7 @@ import JobOpeningCard from './JobOpeningCard';
 const CurrentOpenings = () => {
   const [selectedJob, setSelectedJob] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
   const [formStep, setFormStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
@@ -19,9 +20,6 @@ const CurrentOpenings = () => {
     department: '',
     semester: '',
     skills: '',
-    applicationSource: '',
-    applicationDepartment: '',
-    internshipType: '',
     resume: null,
   });
 
@@ -33,12 +31,27 @@ const CurrentOpenings = () => {
       experience: "2+ years exp",
       description: "We're looking for an experienced React developer to join our product team.",
       fullDescription: "As a Frontend Developer, you'll be responsible for building and maintaining user interfaces using React.js. You'll work closely with our design and backend teams to create seamless user experiences. The ideal candidate has strong JavaScript skills and experience with modern frontend frameworks.",
+      responsibilities: [
+        "Develop new user-facing features using React.js",
+        "Build reusable components and front-end libraries for future use",
+        "Translate designs and wireframes into high-quality code",
+        "Optimize components for maximum performance across devices",
+        "Collaborate with back-end developers to integrate user-facing elements"
+      ],
       requirements: [
         "2+ years of professional React experience",
         "Proficiency in JavaScript (ES6+)",
         "Experience with state management (Redux, Context API)",
         "Familiarity with RESTful APIs",
-        "Understanding of responsive design principles"
+        "Understanding of responsive design principles",
+        "Experience with modern front-end build pipelines and tools"
+      ],
+      benefits: [
+        "Competitive salary and equity",
+        "Health, dental, and vision insurance",
+        "Flexible work hours and remote options",
+        "Professional development budget",
+        "Generous vacation policy"
       ]
     },
     {
@@ -48,14 +61,59 @@ const CurrentOpenings = () => {
       experience: "3+ years exp",
       description: "Help us create beautiful, intuitive interfaces for our enterprise clients.",
       fullDescription: "We're seeking a creative UX/UI Designer to join our team. You'll be responsible for designing user flows, wireframes, and high-fidelity mockups for our web and mobile applications. You should have a strong portfolio demonstrating your design process and problem-solving skills.",
+      responsibilities: [
+        "Create user-centered designs by understanding business requirements and user feedback",
+        "Develop UI mockups and prototypes that clearly illustrate site functionality",
+        "Identify and troubleshoot UX problems",
+        "Collaborate with product managers and engineers",
+        "Maintain design systems and style guides"
+      ],
       requirements: [
         "3+ years of UX/UI design experience",
         "Proficiency in Figma, Sketch, or Adobe XD",
         "Understanding of user-centered design principles",
         "Experience conducting user research",
-        "Ability to create design systems"
+        "Ability to create design systems",
+        "Strong visual design skills"
+      ],
+      benefits: [
+        "Fully remote work environment",
+        "Annual design conference budget",
+        "Latest hardware and software tools",
+        "Flexible schedule",
+        "Team retreats twice a year"
       ]
-    }
+    },
+    {
+      title: "UX/UI Designer",
+      type: "Full-time",
+      location: "Remote",
+      experience: "3+ years exp",
+      description: "Help us create beautiful, intuitive interfaces for our enterprise clients.",
+      fullDescription: "We're seeking a creative UX/UI Designer to join our team. You'll be responsible for designing user flows, wireframes, and high-fidelity mockups for our web and mobile applications. You should have a strong portfolio demonstrating your design process and problem-solving skills.",
+      responsibilities: [
+        "Create user-centered designs by understanding business requirements and user feedback",
+        "Develop UI mockups and prototypes that clearly illustrate site functionality",
+        "Identify and troubleshoot UX problems",
+        "Collaborate with product managers and engineers",
+        "Maintain design systems and style guides"
+      ],
+      requirements: [
+        "3+ years of UX/UI design experience",
+        "Proficiency in Figma, Sketch, or Adobe XD",
+        "Understanding of user-centered design principles",
+        "Experience conducting user research",
+        "Ability to create design systems",
+        "Strong visual design skills"
+      ],
+      benefits: [
+        "Fully remote work environment",
+        "Annual design conference budget",
+        "Latest hardware and software tools",
+        "Flexible schedule",
+        "Team retreats twice a year"
+      ]
+    },
   ];
 
   const validateStep = (step) => {
@@ -75,8 +133,6 @@ const CurrentOpenings = () => {
       if (!formData.department.trim()) newErrors.department = 'Department is required';
       if (!formData.semester.trim()) newErrors.semester = 'Semester is required';
       if (!formData.skills.trim()) newErrors.skills = 'Skills are required';
-      if (!formData.applicationSource) newErrors.applicationSource = 'Please select application source';
-      if (!formData.applicationDepartment) newErrors.applicationDepartment = 'Please select department';
     }
     
     if (step === 2 && !formData.resume) {
@@ -88,6 +144,11 @@ const CurrentOpenings = () => {
   };
 
   const handleViewDetails = (job) => {
+    setSelectedJob(job);
+    setIsDetailsModalOpen(true);
+  };
+
+  const handleApply = (job) => {
     setSelectedJob(job);
     setIsModalOpen(true);
     setFormStep(1);
@@ -104,15 +165,13 @@ const CurrentOpenings = () => {
       department: '',
       semester: '',
       skills: '',
-      applicationSource: '',
-      applicationDepartment: '',
-      internshipType: '',
       resume: null,
     });
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setIsDetailsModalOpen(false);
     setSelectedJob(null);
   };
 
@@ -153,7 +212,7 @@ const CurrentOpenings = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Current Openings</h2>
 
-        <div className="max-w-4xl mx-auto space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {jobOpenings.map((job, index) => (
             <JobOpeningCard
               key={index}
@@ -163,19 +222,89 @@ const CurrentOpenings = () => {
               experience={job.experience}
               description={job.description}
               onViewDetails={() => handleViewDetails(job)}
+              onApply={() => handleApply(job)}
             />
           ))}
         </div>
       </div>
 
+      {/* Job Details Modal */}
+      {isDetailsModalOpen && selectedJob && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 overflow-y-auto">
+          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold">{selectedJob.title}</h3>
+                  <p className="text-gray-600">{selectedJob.type} • {selectedJob.location} • {selectedJob.experience}</p>
+                </div>
+                <button
+                  onClick={closeModal}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-lg font-semibold mb-3">Job Description</h4>
+                  <p className="text-gray-700">{selectedJob.fullDescription}</p>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold mb-3">Responsibilities</h4>
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                    {selectedJob.responsibilities.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold mb-3">Requirements</h4>
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                    {selectedJob.requirements.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-lg font-semibold mb-3">Benefits</h4>
+                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                    {selectedJob.benefits.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="pt-4 border-t border-gray-200">
+                  <button
+                    onClick={() => {
+                      setIsDetailsModalOpen(false);
+                      handleApply(selectedJob);
+                    }}
+                    className="w-full bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium"
+                  >
+                    Apply for this Position
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Application Form Modal */}
       {isModalOpen && selectedJob && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 overflow-y-auto">
           <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold">{selectedJob.title}</h3>
-                  <p className="text-gray-600">{selectedJob.type} • {selectedJob.location} • {selectedJob.experience}</p>
+                  <h3 className="text-2xl font-bold">Apply for {selectedJob.title}</h3>
+                  <p className="text-gray-600">{selectedJob.type} • {selectedJob.location}</p>
                 </div>
                 <button
                   onClick={closeModal}
@@ -274,45 +403,6 @@ const CurrentOpenings = () => {
                           </div>
                         ))}
                       </div>
-                      
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">Source of Application *</label>
-                          <select
-                            name="applicationSource"
-                            onChange={handleChange}
-                            value={formData.applicationSource}
-                            className={`w-full px-3 py-2 border ${errors.applicationSource ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                          >
-                            <option value="">Select</option>
-                            <option>LinkedIn</option>
-                            <option>Internshala</option>
-                            <option>College Reference</option>
-                            <option>Other</option>
-                          </select>
-                          {errors.applicationSource && <p className="mt-1 text-sm text-red-600">{errors.applicationSource}</p>}
-                        </div>
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-1">Department *</label>
-                          <select
-                            name="applicationDepartment"
-                            onChange={handleChange}
-                            value={formData.applicationDepartment}
-                            className={`w-full px-3 py-2 border ${errors.applicationDepartment ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                          >
-                            <option value="">Select</option>
-                            <option>Software Development</option>
-                            <option>IoT Hardware Development</option>
-                            <option>Social Media</option>
-                            <option>Graphics Design</option>
-                            <option>Sales</option>
-                            <option>Marketing</option>
-                            <option>Project</option>
-                            <option>Other</option>
-                          </select>
-                          {errors.applicationDepartment && <p className="mt-1 text-sm text-red-600">{errors.applicationDepartment}</p>}
-                        </div>
-                      </div>
                     </div>
                   )}
 
@@ -369,8 +459,6 @@ const CurrentOpenings = () => {
                             { label: "Department", name: "department" },
                             { label: "Semester", name: "semester" },
                             { label: "Skills", name: "skills" },
-                            { label: "Application Source", name: "applicationSource" },
-                            { label: "Department Applied", name: "applicationDepartment" },
                           ].map(({ label, name }) => (
                             <div key={name} className="text-sm">
                               <p className="text-gray-500">{label}</p>
