@@ -8,6 +8,10 @@ const CurrentOpenings = () => {
   const [formStep, setFormStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
+  const [filters, setFilters] = useState({
+    title: '',
+    location: '',
+  });
 
   const [formData, setFormData] = useState({
     name: '',
@@ -85,36 +89,103 @@ const CurrentOpenings = () => {
       ]
     },
     {
-      title: "UX/UI Designer",
+      title: "Backend Developer (Node.js)",
       type: "Full-time",
-      location: "Remote",
+      location: "Bangalore",
       experience: "3+ years exp",
-      description: "Help us create beautiful, intuitive interfaces for our enterprise clients.",
-      fullDescription: "We're seeking a creative UX/UI Designer to join our team. You'll be responsible for designing user flows, wireframes, and high-fidelity mockups for our web and mobile applications. You should have a strong portfolio demonstrating your design process and problem-solving skills.",
+      description: "Looking for an experienced Node.js developer to build scalable backend services.",
+      fullDescription: "As a Backend Developer, you'll be responsible for designing and implementing server-side logic, databases, and APIs. You'll work with our frontend developers to integrate user-facing elements with server-side logic and ensure high performance and responsiveness to requests from the front-end.",
       responsibilities: [
-        "Create user-centered designs by understanding business requirements and user feedback",
-        "Develop UI mockups and prototypes that clearly illustrate site functionality",
-        "Identify and troubleshoot UX problems",
-        "Collaborate with product managers and engineers",
-        "Maintain design systems and style guides"
+        "Design and implement low-latency, high-availability applications",
+        "Write reusable, testable, and efficient code",
+        "Implement security and data protection measures",
+        "Integrate data storage solutions",
+        "Collaborate with front-end developers"
       ],
       requirements: [
-        "3+ years of UX/UI design experience",
-        "Proficiency in Figma, Sketch, or Adobe XD",
-        "Understanding of user-centered design principles",
-        "Experience conducting user research",
-        "Ability to create design systems",
-        "Strong visual design skills"
+        "3+ years of Node.js development experience",
+        "Strong proficiency with JavaScript/Typescript",
+        "Experience with Express.js or similar frameworks",
+        "Understanding of database technologies (SQL and NoSQL)",
+        "Knowledge of authentication and authorization mechanisms",
+        "Familiarity with Docker and Kubernetes"
       ],
       benefits: [
-        "Fully remote work environment",
-        "Annual design conference budget",
-        "Latest hardware and software tools",
-        "Flexible schedule",
-        "Team retreats twice a year"
+        "Competitive compensation package",
+        "Flexible work arrangements",
+        "Health and wellness benefits",
+        "Continuous learning opportunities",
+        "Stock options"
+      ]
+    },
+    {
+      title: "Data Scientist",
+      type: "Contract",
+      location: "Remote",
+      experience: "5+ years exp",
+      description: "Seeking a data scientist to extract insights from large datasets.",
+      fullDescription: "We're looking for a Data Scientist to analyze complex data and build predictive models. You'll work with cross-functional teams to identify opportunities for leveraging company data to drive business solutions and improve products.",
+      responsibilities: [
+        "Mine and analyze data to drive optimization and improvement",
+        "Develop custom data models and algorithms",
+        "Use predictive modeling to increase customer experiences",
+        "Develop testing frameworks and monitor model performance",
+        "Coordinate with different functional teams"
+      ],
+      requirements: [
+        "5+ years of experience in Data Science",
+        "Strong problem-solving skills",
+        "Experience with statistical computer languages (R, Python, etc.)",
+        "Knowledge of machine learning techniques",
+        "Experience with distributed data/computing tools",
+        "Excellent written and verbal communication skills"
+      ],
+      benefits: [
+        "Remote-first culture",
+        "Project-based compensation",
+        "Cutting-edge technology stack",
+        "Flexible hours",
+        "Opportunity for full-time conversion"
+      ]
+    },
+    {
+      title: "Product Manager",
+      type: "Full-time",
+      location: "Hyderabad",
+      experience: "4+ years exp",
+      description: "Lead product development from conception to launch.",
+      fullDescription: "We're seeking a Product Manager to drive product strategy and execution. You'll work closely with engineering, design, and business teams to build products that customers love while achieving business goals.",
+      responsibilities: [
+        "Define product vision, strategy, and roadmap",
+        "Gather and prioritize product requirements",
+        "Work closely with engineering and design teams",
+        "Analyze market trends and competitive landscape",
+        "Define and analyze metrics to measure product success"
+      ],
+      requirements: [
+        "4+ years of product management experience",
+        "Technical background with understanding of software development",
+        "Proven track record of managing all aspects of product lifecycle",
+        "Excellent written and verbal communication skills",
+        "Strong problem-solving skills",
+        "MBA or equivalent experience preferred"
+      ],
+      benefits: [
+        "Leadership role in growing company",
+        "Significant equity package",
+        "Health and wellness benefits",
+        "Professional development budget",
+        "Generous parental leave"
       ]
     },
   ];
+
+  // Filter jobs based on title and location
+  const filteredJobs = jobOpenings.filter(job => {
+    const titleMatch = job.title.toLowerCase().includes(filters.title.toLowerCase());
+    const locationMatch = job.location.toLowerCase().includes(filters.location.toLowerCase());
+    return titleMatch && locationMatch;
+  });
 
   const validateStep = (step) => {
     const newErrors = {};
@@ -192,6 +263,14 @@ const CurrentOpenings = () => {
     }
   };
 
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    setFilters(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   const handleNextStep = () => {
     if (validateStep(formStep)) {
       setFormStep(prev => prev + 1);
@@ -212,19 +291,89 @@ const CurrentOpenings = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Current Openings</h2>
 
+        {/* Filters Section - Updated UI */}
+        <div className="mb-8 bg-white p-6 rounded-lg shadow-sm">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex-1 w-full">
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  name="title"
+                  value={filters.title}
+                  onChange={handleFilterChange}
+                  placeholder="Job title or keywords"
+                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                />
+              </div>
+            </div>
+            <div className="flex-1 w-full">
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg className="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  name="location"
+                  value={filters.location}
+                  onChange={handleFilterChange}
+                  placeholder="Location or remote"
+                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                />
+              </div>
+            </div>
+            <button 
+              onClick={() => setFilters({ title: '', location: '' })}
+              className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-md transition-colors duration-200 whitespace-nowrap"
+            >
+              Clear filters
+            </button>
+          </div>
+        </div>
+
+        {/* Job Openings Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {jobOpenings.map((job, index) => (
-            <JobOpeningCard
-              key={index}
-              title={job.title}
-              type={job.type}
-              location={job.location}
-              experience={job.experience}
-              description={job.description}
-              onViewDetails={() => handleViewDetails(job)}
-              onApply={() => handleApply(job)}
-            />
-          ))}
+          {filteredJobs.length > 0 ? (
+            filteredJobs.map((job, index) => (
+              <JobOpeningCard
+                key={index}
+                title={job.title}
+                type={job.type}
+                location={job.location}
+                experience={job.experience}
+                description={job.description}
+                onViewDetails={() => handleViewDetails(job)}
+                onApply={() => handleApply(job)}
+              />
+            ))
+          ) : (
+            <div className="col-span-full text-center py-12">
+              <svg
+                className="mx-auto h-12 w-12 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <h3 className="mt-2 text-lg font-medium text-gray-900">No jobs found</h3>
+              <p className="mt-1 text-gray-500">
+                Try adjusting your search or filter to find what you're looking for.
+              </p>
+            </div>
+          )}
         </div>
       </div>
 
