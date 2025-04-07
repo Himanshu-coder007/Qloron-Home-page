@@ -101,7 +101,7 @@ const Navbar = () => {
             <Link to="/portfolio">PORTFOLIO</Link>
           </li>
           <li className="hover:text-cyan-500 cursor-pointer font-medium">
-            <Link to="/contacts">CONTACTS</Link>
+            <Link to="/contacts">CONTACT US</Link>
           </li>
           <li className="hover:text-cyan-500 cursor-pointer font-medium">
             <Link to="/careers">CAREERS</Link>
