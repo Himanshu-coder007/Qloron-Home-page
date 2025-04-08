@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "title": "Gangarams Book Bureau",
+      "description": "At Gangarams Book Bureau you will surely find any book you are looking for in the academic, professional, technical, general, fiction and non-fiction genres.",
+      "tech": "E-commerce, Bookstore Platform",
+      "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 2,
+      "title": "Falcon Carriers",
+      "description": "Falcon Carriers is a privately owned company with nationwide depots based in Slough, Bristol and Maryport.",
+      "tech": "Transportation Management System",
+      "image": "https://media.istockphoto.com/id/928084870/photo/close-up-of-two-delivery-men-carrying-cardboard-box.jpg?s=612x612&w=0&k=20&c=dahuPXey6YdEGOT9rKUeK73AHvBFAWfaPejWD7XRXXY="
+    },
+    {
+      "id": 3,
+      "title": "Ptaglobal",
+      "description": "Industry education has traditionally focused on the human body, physical needs, exercise.",
+      "tech": "Education Platform",
+      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 4,
+      "title": "Daily Challenge (DayC)",
+      "description": "The Daily Challenge app (DAYC) aims to let you earn money online with fun challenges, games and lets you create your own social network.",
+      "tech": "Mobile App, Social Network",
+      "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 5,
+      "title": "Mobile Fashion World",
+      "description": "We sell high quality theme influenced accessories and merchandise that you love, journey to achieve their happiness and our goals.",
+      "tech": "E-commerce, Fashion Platform",
+      "image": "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 6,
+      "title": "DAN.com",
+      "description": "Our platform makes a change of control and ownership of domains easier, safer and faster.",
+      "tech": "Domain Marketplace",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 7,
+      "title": "Hey Mitty",
+      "description": "Partners with real estate and finance industry experts to introduce you to services required for property ownership.",
+      "tech": "Real Estate Platform",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 8,
+      "title": "CarGenix",
+      "description": "A one-stop online marketplace that must be approached when your car needs repair, maintenance and servicing.",
+      "tech": "Automotive Service Platform",
+      "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 9,
+      "title": "Crodor",
+      "description": "Manufacturer of PVC Tarpaulins, Shade Net, Industrial Rope, Mulching Sheet, etc.",
+      "tech": "Industrial Manufacturing System",
+      "image": "https://www.mlflex.com/mlflex/2020/12/24/tarpaulin-2.jpg?imageView2/2/format/jp2"
+    },
+    {
+      "id": 10,
+      "title": "WhealthyLife.com",
+      "description": "An online platform which can be accessed for all your health needs, making healthcare a hassle-free experience.",
+      "tech": "Healthcare Portal",
+      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 11,
+      "title": "FRIGO",
+      "description": "A live broadcasting and music streaming app across the globe to listen to favorite artists, songs and albums for free.",
+      "tech": "Music Streaming App",
+      "image": "https://themindstudios.com/blog/content/images/2022/10/Cover---How-to-Create-a-Music-Streaming-App-Like-Spotify-in-2023.png"
+    },
+    {
+      "id": 12,
+      "title": "INDILIVETV",
+      "description": "Allows you to live-stream your favorite moments, and make friends from all around the world.",
+      "tech": "Live Streaming Platform",
+      "image": "https://www.epiphan.com/wp-content/uploads/2019/04/How-to-live-stream-an-event-well_FB.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Aryan Hr Solutions",
+      "description": "Offers recruitment services to corporations of varying sizes across multiple domains.",
+      "tech": "HR Management System",
+      "image": "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    }
+  ]

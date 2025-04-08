@@ -98,7 +98,7 @@ const Navbar = () => {
             <Link to="/technologies">TECHNOLOGIES</Link>
           </li>
           <li className="hover:text-cyan-500 cursor-pointer font-medium">
-            <Link to="/portfolio">PORTFOLIO</Link>
+            <Link to="/projects">PROJECTS</Link>
           </li>
           <li className="hover:text-cyan-500 cursor-pointer font-medium">
             <Link to="/contacts">CONTACT US</Link>
