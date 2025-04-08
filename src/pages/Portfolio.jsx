@@ -16,7 +16,7 @@ const Portfolio = () => {
           <h1 className="text-4xl font-bold mb-4">Qloron Technology</h1>
           <h2 className="text-2xl font-semibold mb-4">Transforming Ideas into Reality</h2>
           <p className="text-lg">
-            Welcome to our software company portfolio! We are dedicated to providing top-notch solutions for your business needs. With our expertise, innovative services, and talented team, we guarantee exceptional results.
+            Welcome to our software company Projects Page! We are dedicated to providing top-notch solutions for your business needs. With our expertise, innovative services, and talented team, we guarantee exceptional results.
           </p>
         </div>
       </section>
