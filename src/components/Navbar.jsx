@@ -73,23 +73,8 @@ const Navbar = () => {
                 ref={servicesRef}
                 className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200"
               >
-                <div className="px-4 py-2 font-medium text-gray-900">Services we provide</div>
-                <button onClick={() => handleNavigation('/services/higher-resources')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Higher Resources</button>
-                <button onClick={() => handleNavigation('/services/business-platform')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Business Technology Platform</button>
-                <button onClick={() => handleNavigation('/services/erp')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Enterprise Resourcing Planning (ERP)</button>
-                <button onClick={() => handleNavigation('/services/crm')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">CRM & Customer Experience (CX)</button>
-                <button onClick={() => handleNavigation('/services/spend-management')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Spend Management</button>
-                <button onClick={() => handleNavigation('/services/hcm')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Human Capital Management</button>
-                <button onClick={() => handleNavigation('/services/financial-support')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Financial Support</button>
-                <button onClick={() => handleNavigation('/services/web-hosting')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Web Hosting</button>
-                <button onClick={() => handleNavigation('/services/web-development')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Web Development</button>
-                <button onClick={() => handleNavigation('/services/app-development')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">App Development</button>
-                <button onClick={() => handleNavigation('/services/digital-marketing')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Digital Marketing</button>
-                <button onClick={() => handleNavigation('/services/data-export')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Data Export</button>
-                
-                <div className="border-t border-gray-200 my-1"></div>
-                <div className="px-4 py-2 font-medium text-gray-900">Support</div>
-                <button onClick={() => handleNavigation('/support')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100">Qloron Services & Support</button>
+                <button onClick={() => handleNavigation('/services')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100 font-medium">Services</button>
+                <button onClick={() => handleNavigation('/support')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100 font-medium">Support</button>
               </div>
             )}
           </li>
