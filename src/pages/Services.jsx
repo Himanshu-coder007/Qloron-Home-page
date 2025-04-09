@@ -226,11 +226,11 @@ const Services = () => {
               {services.map((service, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
                   variants={item}
                   whileHover={{ y: -5 }}
                 >
-                  <div className="p-6 flex flex-col items-center">
+                  <div className="p-6 flex flex-col items-center flex-grow">
                     {/* Rounded Image */}
                     <motion.div 
                       className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-[#0A9CAD]"
@@ -255,17 +255,14 @@ const Services = () => {
                     
                     {/* Service Description */}
                     <motion.p 
-                      className="text-gray-600 mb-6 text-center"
+                      className="text-gray-600 mb-6 text-center flex-grow"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.2, duration: 0.5 }}
                     >
-                      {service.description.length > 150 
-                        ? `${service.description.substring(0, 150)}...` 
-                        : service.description}
+                      {service.description}
                     </motion.p>
-                    
                   </div>
                 </motion.div>
               ))}

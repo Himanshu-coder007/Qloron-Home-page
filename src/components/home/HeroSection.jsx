@@ -23,11 +23,29 @@ const HeroSection = () => {
             <p className="text-xl md:text-2xl mb-8 leading-relaxed text-white">
               Innovative technology solutions for your business growth
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1">
+            <button 
+              className="bg-[#26D6EB] hover:bg-[#1FB8CA] text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl"
+              style={{
+                boxShadow: '0 4px 14px rgba(38, 214, 235, 0.4)'
+              }}
+            >
               Explore Solutions
             </button>
           </div>
         </div>
+      </div>
+      
+      {/* Optional animated elements with the theme color */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+        <svg 
+          className="w-10 h-10 text-[#26D6EB]" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
       </div>
     </section>
   );
