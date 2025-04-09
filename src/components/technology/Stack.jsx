@@ -7,43 +7,43 @@ const mobileTech = [
     name: "React",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
-    bgColor: "#61DAFB",
-    textColor: "#000",
+    bgColor: "#FFFFFF",
+    textColor: "#61DAFB",
   },
   {
     name: "JAVA",
     image:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png",
-    bgColor: "#049EF4",
-    textColor: "#fff",
+      "https://qloron.com/assets/java-B1cugfie.svg",
+    bgColor: "#FFFFFF",
+    textColor: "#049EF4",
   },
   {
     name: "Kotlin",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1024px-Kotlin_Icon.png",
-    bgColor: "#339933",
-    textColor: "#fff",
+      "https://qloron.com/assets/kotlin-DU8Eh2UU.svg",
+    bgColor: "#FFFFFF",
+    textColor: "#339933",
   },
   {
     name: "Flutter",
     image:
-      "https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg",
-    bgColor: "#02569B",
-    textColor: "#fff",
+      "https://qloron.com/assets/flutter-BGBtcDqw.svg",
+    bgColor: "#FFFFFF",
+    textColor: "#02569B",
   },
   {
     name: "Ionic",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ionic_Logo.svg/1280px-Ionic_Logo.svg.png",
-    bgColor: "#FFCA28",
-    textColor: "#000",
+      "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='50'%20height='50'%20viewBox='0%200%2050%2050'%20fill='none'%3e%3cpath%20d='M50%2025C50%2038.8071%2038.8071%2050%2025%2050C11.1929%2050%200%2038.8071%200%2025C0%2011.1929%2011.1929%200%2025%200C38.8071%200%2050%2011.1929%2050%2025ZM4.47619%2025C4.47619%2036.335%2013.665%2045.5238%2025%2045.5238C36.335%2045.5238%2045.5238%2036.335%2045.5238%2025C45.5238%2013.665%2036.335%204.47619%2025%204.47619C13.665%204.47619%204.47619%2013.665%204.47619%2025Z'%20fill='%23478AFF'/%3e%3ccircle%20cx='24.9998'%20cy='25.0001'%20r='8.33333'%20fill='%23478AFF'/%3e%3ccircle%20cx='40.0002'%20cy='7.49992'%20r='3.66667'%20fill='%23478AFF'%20stroke='white'/%3e%3c/svg%3e",
+    bgColor: "#FFFFFF",
+    textColor: "#FFCA28",
   },
   {
     name: "Dart",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Dart-logo.png/1024px-Dart-logo.png",
-    bgColor: "#0083C9",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#0083C9",
   },
 ];
 
@@ -51,58 +51,58 @@ const webTech = [
   {
     name: "HTML",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png",
-    bgColor: "#E44D26",
-    textColor: "#fff",
+      "https://qloron.com/assets/html-BYrraOFD.svg",
+    bgColor: "#FFFFFF",
+    textColor: "#E44D26",
   },
   {
     name: "CSS",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png",
-    bgColor: "#264DE4",
-    textColor: "#fff",
+      "https://qloron.com/assets/css-CcNQHZyi.svg",
+    bgColor: "#FFFFFF",
+    textColor: "#264DE4",
   },
   {
     name: "JavaScript",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
-    bgColor: "#F0DB4F",
-    textColor: "#323330",
+    bgColor: "#FFFFFF",
+    textColor: "#F0DB4F",
   },
   {
     name: "React",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
-    bgColor: "#61DAFB",
-    textColor: "#20232A",
+    bgColor: "#FFFFFF",
+    textColor: "#61DAFB",
   },
   {
     name: "Angular",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
-    bgColor: "#DD0031",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#DD0031",
   },
   {
     name: "TypeScript",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png",
-    bgColor: "#3178C6",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#3178C6",
   },
   {
     name: "Material Design",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Material_Design_Logo.svg/1200px-Google_Material_Design_Logo.svg.png",
-    bgColor: "#757575",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#757575",
   },
   {
     name: ".NET",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png",
-    bgColor: "#512BD4",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#512BD4",
   },
 ];
 
@@ -111,29 +111,29 @@ const desktopTech = [
     name: "Angular",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png",
-    bgColor: "#B52E31",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#B52E31",
   },
   {
     name: "Java",
     image:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png",
-    bgColor: "#007396",
-    textColor: "#fff",
+      "https://qloron.com/assets/java-B1cugfie.svg",
+    bgColor: "#FFFFFF",
+    textColor: "#007396",
   },
   {
     name: "React",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png",
-    bgColor: "#61DAFB",
-    textColor: "#20232A",
+    bgColor: "#FFFFFF",
+    textColor: "#61DAFB",
   },
   {
     name: ".NET",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png",
-    bgColor: "#512BD4",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#512BD4",
   },
 ];
 
@@ -142,57 +142,57 @@ const backendTech = [
     name: "Node JS",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png",
-    bgColor: "#339933",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#339933",
   },
   {
     name: "PHP",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png",
-    bgColor: "#777BB4",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#777BB4",
   },
   {
     name: "Python",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
-    bgColor: "#3776AB",
-    textColor: "#FFD43B",
+    bgColor: "#FFFFFF",
+    textColor: "#3776AB",
   },
   {
     name: "SQL",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Sql_data_base_with_logo.png/640px-Sql_data_base_with_logo.png",
-    bgColor: "#336791",
-    textColor: "#fff",
+      "https://qloron.com/assets/sql-ghJHJqla.svg",
+    bgColor: "#FFFFFF",
+    textColor: "#336791",
   },
   {
     name: "Mongo DB",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png",
-    bgColor: "#47A248",
-    textColor: "#fff",
+      "https://qloron.com/assets/mongodb-BhtmPpQi.svg",
+    bgColor: "#FFFFFF",
+    textColor: "#47A248",
   },
   {
     name: "Java",
     image:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png",
-    bgColor: "#007396",
-    textColor: "#fff",
+      "https://qloron.com/assets/java-B1cugfie.svg",
+    bgColor: "#FFFFFF",
+    textColor: "#007396",
   },
   {
     name: ".NET",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png",
-    bgColor: "#512BD4",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#512BD4",
   },
   {
     name: "Spring Boot",
     image:
       "https://www.clipartmax.com/png/middle/117-1171017_spring-logo-spring-framework-logo.png",
-    bgColor: "#339933",
-    textColor: "#fff",
+    bgColor: "#FFFFFF",
+    textColor: "#339933",
   },
 ];
 
@@ -200,8 +200,11 @@ const backendTech = [
 const TechCard = ({ tech }) => {
   return (
     <div
-      className="flex flex-col items-center p-6 rounded-xl shadow-md hover:shadow-lg transition-all"
-      style={{ backgroundColor: tech.bgColor }}
+      className="flex flex-col items-center p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-transparent transform hover:-translate-y-1"
+      style={{ 
+        backgroundColor: tech.bgColor,
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      }}
     >
       <div className="w-20 h-20 mb-4 bg-white rounded-full flex items-center justify-center p-2 shadow-sm">
         <img
@@ -216,10 +219,11 @@ const TechCard = ({ tech }) => {
         />
       </div>
       <span
-        className="font-bold text-md px-3 py-1 rounded-full"
+        className="text-md px-3 py-1 rounded-full font-medium"
         style={{
-          color: tech.textColor,
-          backgroundColor: `rgba(0,0,0,0.1)`,
+          color: "#000000",
+          backgroundColor: 'rgba(255, 255, 255, 0.7)',
+          backdropFilter: 'blur(4px)',
         }}
       >
         {tech.name}
@@ -234,7 +238,7 @@ export default function Stack() {
     <div className="text-center px-4 py-12 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-          Built With <span className="text-blue-500">Modern Technologies</span>
+          Built With <span className="text-[#0092B8]">Modern Technologies</span>
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
           Our team leverages cutting-edge technologies to deliver high-quality
@@ -246,7 +250,7 @@ export default function Stack() {
           {/* Mobile Development Section */}
           <div className="flex justify-center">
             <div className="w-full max-w-3xl">
-              <h3 className="text-2xl font-bold mb-8 text-blue-500">
+              <h3 className="text-2xl font-bold mb-8 text-[#0092B8]">
                 Mobile Development
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -260,7 +264,7 @@ export default function Stack() {
           {/* Web Development Section */}
           <div className="flex justify-center">
             <div className="w-full max-w-3xl">
-              <h3 className="text-2xl font-bold mb-8 text-blue-500">
+              <h3 className="text-2xl font-bold mb-8 text-[#0092B8]">
                 Web App Development
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -274,7 +278,7 @@ export default function Stack() {
           {/* Desktop Development Section */}
           <div className="flex justify-center">
             <div className="w-full max-w-3xl">
-              <h3 className="text-2xl font-bold mb-8 text-blue-500">
+              <h3 className="text-2xl font-bold mb-8 text-[#0092B8]">
                 Desktop App Development
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -288,7 +292,7 @@ export default function Stack() {
           {/* Backend Development Section */}
           <div className="flex justify-center">
             <div className="w-full max-w-3xl">
-              <h3 className="text-2xl font-bold mb-8 text-blue-500">
+              <h3 className="text-2xl font-bold mb-8 text-[#0092B8]">
                 Backend Development
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

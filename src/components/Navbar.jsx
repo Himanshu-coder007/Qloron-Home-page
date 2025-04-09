@@ -102,12 +102,6 @@ const Navbar = () => {
         >
           HIRE DEVELOPERS
         </button>
-        <button 
-          onClick={() => handleNavigation('/sortboxs')}
-          className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-cyan-600 transition"
-        >
-          SORTBOXS
-        </button>
       </div>
     </nav>
   );
