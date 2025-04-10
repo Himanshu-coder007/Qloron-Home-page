@@ -15,8 +15,10 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
-        servicesRef.current && !servicesRef.current.contains(event.target) && 
-        servicesButtonRef.current && !servicesButtonRef.current.contains(event.target)
+        servicesRef.current &&
+        !servicesRef.current.contains(event.target) &&
+        servicesButtonRef.current &&
+        !servicesButtonRef.current.contains(event.target)
       ) {
         setOpenDropdown(null);
       }
@@ -52,7 +54,7 @@ const Navbar = () => {
           <li className="text-cyan-500 font-medium">
             <Link to="/">HOME</Link>
           </li>
-          
+
           {/* About Us Link */}
           <li className="hover:text-cyan-500 cursor-pointer font-medium">
             <Link to="/about">ABOUT US</Link>
@@ -60,21 +62,31 @@ const Navbar = () => {
 
           {/* Services & Support Dropdown */}
           <li className="relative">
-            <button 
+            <button
               ref={servicesButtonRef}
-              onClick={() => toggleDropdown('services')}
+              onClick={() => toggleDropdown("services")}
               className="hover:text-cyan-500 cursor-pointer font-medium flex items-center gap-1"
             >
               SERVICES & SUPPORT ▼
             </button>
-            
-            {openDropdown === 'services' && (
-              <div 
+
+            {openDropdown === "services" && (
+              <div
                 ref={servicesRef}
                 className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200"
               >
-                <button onClick={() => handleNavigation('/services')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100 font-medium">Services</button>
-                <button onClick={() => handleNavigation('/support')} className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100 font-medium">Support</button>
+                <button
+                  onClick={() => handleNavigation("/services")}
+                  className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100 font-medium"
+                >
+                  Services
+                </button>
+                <button
+                  onClick={() => handleNavigation("/support")}
+                  className="block w-full text-left px-6 py-2 text-sm text-gray-700 hover:bg-gray-100 font-medium"
+                >
+                  Support
+                </button>
               </div>
             )}
           </li>
@@ -96,12 +108,14 @@ const Navbar = () => {
 
       {/* Buttons - Right aligned */}
       <div className="flex-shrink-0 flex gap-3">
-        <button 
-          onClick={() => handleNavigation('/hire-developers')}
-          className="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-700 transition"
+        <a
+          href="https://sortboxs.com/login"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#26D6EB] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-700 transition"
         >
-          HIRE DEVELOPERS
-        </button>
+          SORTBOXS
+        </a>
       </div>
     </nav>
   );

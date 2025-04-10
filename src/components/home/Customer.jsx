@@ -38,7 +38,7 @@ const Customer = () => {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">
               Join thousands of satisfied customers who rely on our services worldwide
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 mb-10">
+            <button className="bg-[#26D6EB] hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 mb-10">
               Testimonials
             </button>
             

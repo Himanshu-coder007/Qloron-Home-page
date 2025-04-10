@@ -26,7 +26,7 @@ const GetInTouch = () => {
     <div className="max-w-4xl mx-auto my-8 bg-white rounded-lg shadow-md overflow-hidden">
       <div className="md:flex">
         {/* Left Side - Image (smaller) */}
-        <div className="md:w-2/5 bg-gray-100 flex items-center justify-center p-4">
+        <div className="md:w-2/5 bg-[#068FA3] flex items-center justify-center p-4">
           <img 
             src="https://account.asus.com/img/login_img02.png" 
             alt="Contact illustration"
@@ -107,7 +107,7 @@ const GetInTouch = () => {
 
             <button
               type="submit"
-              className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 text-sm"
+              className="w-full bg-[#26D6EB] text-white font-medium py-2 px-4 rounded-md transition duration-300 text-sm cursor-pointer"
             >
               Submit
             </button>

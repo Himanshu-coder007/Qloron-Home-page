@@ -33,19 +33,19 @@ const WhyChooseUs = () => {
       title: "Expert Team",
       description: "Our professionals deliver top-notch solutions tailored to your needs.",
       icon: <FaUserTie />,
-      bgClass: "bg-gradient-to-br from-amber-500 to-rose-600"
+      bgClass: "bg-gradient-to-br from-[#26D6EB] to-[#2a7dec]"
     },
     {
       title: "Cutting-Edge Technology",
       description: "We use the latest technologies to build future-proof solutions.",
       icon: <FaLaptopCode />,
-      bgClass: "bg-gradient-to-br from-purple-500 to-purple-700"
+      bgClass: "bg-gradient-to-br from-[#26D6EB] to-[#2a7dec]"
     },
     {
       title: "24/7 Support",
       description: "Round-the-clock assistance to ensure your business runs smoothly.",
       icon: <FaHeadset />,
-      bgClass: "bg-gradient-to-br from-teal-500 to-teal-700"
+      bgClass: "bg-gradient-to-br from-[#26D6EB] to-[#2a7dec]"
     }
   ];
 
@@ -55,7 +55,7 @@ const WhyChooseUs = () => {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.5, // Increased from 0.3 to 0.5 for slower stagger
+        staggerChildren: 0.5,
       }
     }
   };
@@ -63,15 +63,15 @@ const WhyChooseUs = () => {
   const cardVariants = {
     hidden: (i) => ({
       opacity: 0,
-      y: 30 + (i * 20) // Slightly reduced initial y position
+      y: 30 + (i * 20)
     }),
     visible: (i) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.4, // Increased delay from 0.2 to 0.4
-        duration: 0.8, // Increased duration from 0.5 to 0.8
-        ease: [0.16, 0.77, 0.47, 0.97] // Smoother easing function
+        delay: i * 0.4,
+        duration: 0.8,
+        ease: [0.16, 0.77, 0.47, 0.97]
       }
     })
   };
@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
       initial="hidden"
       whileInView="visible"
       variants={containerVariants}
-      viewport={{ once: true, margin: "-100px" }} // Added margin to trigger earlier
+      viewport={{ once: true, margin: "-100px" }}
       className="py-16 px-4 max-w-7xl mx-auto bg-gray-50"
     >
       <div className="text-center mb-12">
