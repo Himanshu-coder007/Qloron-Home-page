@@ -98,7 +98,7 @@ const webTech = [
     textColor: "#757575",
   },
   {
-    name: "",
+    name: ".NET",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png",
     bgColor: "#FFFFFF",
@@ -129,7 +129,7 @@ const desktopTech = [
     textColor: "#61DAFB",
   },
   {
-    name: "",
+    name: ".NET",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/1200px-.NET_Core_Logo.svg.png",
     bgColor: "#FFFFFF",
@@ -139,14 +139,14 @@ const desktopTech = [
 
 const backendTech = [
   {
-    name: "",
+    name: "Node Js",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png",
     bgColor: "#FFFFFF",
     textColor: "#339933",
   },
   {
-    name: "",
+    name: "PHP",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png",
     bgColor: "#FFFFFF",

@@ -9,10 +9,7 @@ const Aboutus = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-150">
-        {" "}
-        {/* Changed from h-screen to h-96 */}
-        {/* Background image */}
+      <div className="relative h-[250px] md:h-[300px] lg:h-[400px]">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
@@ -22,13 +19,19 @@ const Aboutus = () => {
             backgroundRepeat: "no-repeat",
           }}
         />
-        {/* Content with light transparent background */}
+        <div
+          className="absolute inset-0 z-1"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(16, 182, 194, 0.8), rgba(16, 182, 194, 0.5))",
+          }}
+        />
         <div className="relative z-10 flex items-center justify-center h-full px-4">
-          <div className="text-center max-w-4xl p-8 rounded-lg">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8">
-              We are a <span className="text-blue-600">team</span> with a{" "}
-              <span className="text-purple-600">creative</span> approach to{" "}
-              <span className="text-pink-600">work</span>
+          <div className="text-center max-w-4xl p-8">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              We are a <span className="text-white">team</span> with a{" "}
+              <span className="text-white">creative</span> approach to{" "}
+              <span className="text-white">work</span>
             </h1>
           </div>
         </div>
@@ -41,7 +44,7 @@ const Aboutus = () => {
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-[#10B6C2] sm:text-4xl">
               Our Core Values
             </h2>
             <p className="mt-4 text-xl text-gray-600">
@@ -52,12 +55,14 @@ const Aboutus = () => {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {/* Innovation Card */}
             <div className="rounded-xl overflow-hidden shadow-lg">
-              <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">
-                <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4">
+              <div className="bg-[#F3F4F6] p-6">
+                <div className="flex items-center justify-center w-16 h-16 bg-[#10B6C2] bg-opacity-20 rounded-full mb-4">
                   <FaLightbulb className="w-8 h-8 text-black" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Innovation</h3>
-                <p className="opacity-90">
+                <h3 className="text-xl font-bold mb-2 text-[#10B6C2]">
+                  Innovation
+                </h3>
+                <p className="text-gray-600">
                   We constantly push boundaries and explore new ideas to deliver
                   cutting-edge solutions.
                 </p>
@@ -66,12 +71,14 @@ const Aboutus = () => {
 
             {/* Collaboration Card */}
             <div className="rounded-xl overflow-hidden shadow-lg">
-              <div className="bg-gradient-to-r from-blue-500 to-teal-400 p-6 text-white">
-                <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4">
-                  <FaUsers className="w-8 h-8 text-black" />
+              <div className="bg-[#F3F4F6] p-6">
+                <div className="flex items-center justify-center w-16 h-16 bg-[#10B6C2] bg-opacity-20 rounded-full mb-4">
+                  <FaUsers className="w-8 h-8 text-black"  />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Collaboration</h3>
-                <p className="opacity-90">
+                <h3 className="text-xl font-bold mb-2 text-[#10B6C2]">
+                  Collaboration
+                </h3>
+                <p className="text-gray-600">
                   We believe in teamwork and building strong relationships with
                   our clients and partners.
                 </p>
@@ -80,12 +87,14 @@ const Aboutus = () => {
 
             {/* Growth Card */}
             <div className="rounded-xl overflow-hidden shadow-lg">
-              <div className="bg-gradient-to-r from-green-500 to-emerald-400 p-6 text-white">
-                <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4">
-                  <FaChartLine className="w-8 h-8 text-black" />
+              <div className="bg-[#F3F4F6] p-6">
+                <div className="flex items-center justify-center w-16 h-16 bg-[#10B6C2] bg-opacity-20 rounded-full mb-4">
+                  <FaChartLine className="w-8 h-8 text-black"  />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Growth</h3>
-                <p className="opacity-90">
+                <h3 className="text-xl font-bold mb-2 text-[#10B6C2]">
+                  Growth
+                </h3>
+                <p className="text-gray-600">
                   We're committed to continuous learning and helping our clients
                   achieve sustainable growth.
                 </p>
@@ -94,12 +103,14 @@ const Aboutus = () => {
 
             {/* Integrity Card */}
             <div className="rounded-xl overflow-hidden shadow-lg">
-              <div className="bg-gradient-to-r from-orange-500 to-yellow-400 p-6 text-white">
-                <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4">
-                  <FaHandshake className="w-8 h-8 text-black" />
+              <div className="bg-[#F3F4F6] p-6">
+                <div className="flex items-center justify-center w-16 h-16 bg-[#10B6C2] bg-opacity-20 rounded-full mb-4">
+                  <FaHandshake className="w-8 h-8 text-black"/>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Integrity</h3>
-                <p className="opacity-90">
+                <h3 className="text-xl font-bold mb-2 text-[#10B6C2]">
+                  Integrity
+                </h3>
+                <p className="text-gray-600">
                   We operate with honesty and transparency in all our
                   interactions and business dealings.
                 </p>
@@ -110,13 +121,13 @@ const Aboutus = () => {
       </div>
 
       {/* New Objectives Section */}
-      <Principles/>
+      <Principles />
 
       {/* Teams section */}
-      <Team/>
+      <Team />
 
       {/* Projects section */}
-     <Projects/>
+      <Projects />
     </div>
   );
 };

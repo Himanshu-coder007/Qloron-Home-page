@@ -24,7 +24,7 @@ const Info = () => {
           {/* Text Content */}
           <div className="md:w-1/2 md:pl-12 md:pr-6 text-center md:text-left"> 
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              About <span className="text-indigo-600">Qloron</span>
+              About <span className="text-[#10B6C2]">Qloron</span>
             </h2>
             
             <p className="text-lg text-gray-600 mb-6">
@@ -115,4 +115,4 @@ const Info = () => {
   )
 }
 
-export default Info
+export default Info;

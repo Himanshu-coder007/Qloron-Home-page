@@ -39,9 +39,9 @@ const Contacts = () => {
       <div className="flex flex-col md:flex-row items-center gap-8 mb-16">
         {/* Left side - Text content */}
         <div className="md:w-1/2 md:ml-12">
-          <h1 className="text-3xl font-bold mb-6">Talk to Our <span className="text-blue-600">Experts</span></h1>
+          <h1 className="text-3xl font-bold mb-6">Talk to Our <span className="text-[#10B6C2]">Experts</span></h1>
           <p className="text-lg mb-8">
-            <span className="font-bold">Qloron Technology</span> development team will contact you within <span className="font-bold text-blue-600">48 hours</span>.
+            <span className="font-bold">Qloron Technology</span> development team will contact you within <span className="font-bold text-[#10B6C2]">48 hours</span>.
           </p>
           
           {/* Form fields */}
@@ -52,7 +52,7 @@ const Contacts = () => {
                 type="text" 
                 id="name"
                 name="user_name" 
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#10B6C2]"
                 placeholder="Enter your full name"
                 required
               />
@@ -64,7 +64,7 @@ const Contacts = () => {
                 type="email" 
                 id="email"
                 name="user_email" 
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#10B6C2]"
                 placeholder="Enter your email"
                 required
               />
@@ -76,7 +76,7 @@ const Contacts = () => {
                 type="text" 
                 id="company"
                 name="company_name" 
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#10B6C2]"
                 placeholder="Enter your company name"
               />
             </div>
@@ -87,7 +87,7 @@ const Contacts = () => {
                 type="tel" 
                 id="phone"
                 name="phone_number" 
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#10B6C2]"
                 placeholder="Enter your phone number"
               />
             </div>
@@ -98,13 +98,13 @@ const Contacts = () => {
                 id="message" 
                 name="message"
                 rows="4"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#10B6C2]"
                 placeholder="Enter your message"
                 required
               ></textarea>
             </div>
             
-            <button type="submit" className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-300">
+            <button type="submit" className="bg-[#10B6C2] text-white px-6 py-2 rounded-md hover:bg-[#0D9BA6] transition duration-300">
               Submit
             </button>
           </form>
@@ -129,7 +129,7 @@ const Contacts = () => {
           <h3 className="text-2xl font-semibold mb-4">Contact Information</h3>
           <p className="text-lg mb-4">
             Get all your queries answered. Leave a message at the below numbers or drop a mail to 
-            <span className="font-bold text-blue-600"> info@qloron.com</span>
+            <span className="font-bold text-[#10B6C2]"> info@qloron.com</span>
           </p>
           <div className="space-y-2">
             <div className="flex justify-center items-center">
@@ -162,8 +162,8 @@ const Contacts = () => {
             {/* Text on right */}
             <div className="md:w-1/2 p-6">
               <div className="flex items-center mb-4">
-                <div className="bg-blue-100 p-3 rounded-full mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="bg-[#E6F7F9] p-3 rounded-full mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#10B6C2]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -179,7 +179,7 @@ const Contacts = () => {
                 href="https://www.google.co.in/maps/place/Qloron+Technology/@19.2143779,76.0962879,7z/data=!4m7!3m6!1s0x3bcb91612ab4721d:0x5b9ca42836fc8c3f!8m2!3d17.4346327!4d78.3881142!15sCg5xbG9yb24gcHZ0IGx0ZJIBG2Fzc29jaWF0aW9uX29yX29yZ2FuaXphdGlvbuABAA!16s%2Fg%2F11l6vbydqc?entry=tts" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
+                className="inline-flex items-center px-4 py-2 bg-[#10B6C2] text-white rounded-md hover:bg-[#0D9BA6] transition duration-300"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />

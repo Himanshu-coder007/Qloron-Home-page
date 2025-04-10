@@ -52,7 +52,7 @@ const Principles = () => {
       <div className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-[#10B6C2] sm:text-4xl">
               Our Guiding Principles
             </h2>
             <p className="mt-4 text-xl text-gray-600">

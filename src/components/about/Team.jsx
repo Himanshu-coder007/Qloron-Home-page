@@ -1,6 +1,6 @@
 // src/components/about/Team.jsx
 import React from 'react';
-import { FaTwitter, FaLinkedin, FaGithub, FaUser } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Team = () => {
   const teamMembers = [
@@ -8,6 +8,7 @@ const Team = () => {
       id: 1,
       name: 'Nikhilesh Mandal',
       position: 'CEO & Founder',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
       social: {
         twitter: '#',
         linkedin: '#',
@@ -16,8 +17,9 @@ const Team = () => {
     },
     {
       id: 2,
-      name: 'Jane Smith',
+      name: 'Emily Chen',
       position: 'CTO',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
       social: {
         twitter: '#',
         linkedin: '#',
@@ -28,6 +30,7 @@ const Team = () => {
       id: 3,
       name: 'Mike Johnson',
       position: 'Lead Developer',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
       social: {
         twitter: '#',
         linkedin: '#',
@@ -36,8 +39,9 @@ const Team = () => {
     },
     {
       id: 4,
-      name: 'Sarah Williams',
+      name: 'Sophia Rodriguez',
       position: 'Marketing Director',
+      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
       social: {
         twitter: '#',
         linkedin: '#',
@@ -50,7 +54,7 @@ const Team = () => {
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-3">Our Team</h2>
+          <h2 className="text-3xl font-bold text-[#10B6C2] mb-3">Our Team</h2>
           <p className="text-lg text-gray-600">Meet the talented people behind our success</p>
         </div>
         
@@ -61,10 +65,11 @@ const Team = () => {
                 key={member.id} 
                 className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="h-56 flex items-center justify-center bg-gray-100">
-                  <FaUser 
-                    size={80} 
-                    className="text-gray-400"
+                <div className="h-56 overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-5 text-center">
