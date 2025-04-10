@@ -47,7 +47,7 @@ const Info = () => {
           {/* Image */}
           <div className="md:w-1/2 flex justify-center">
             <img 
-              src="/src/assets/about.svg" 
+              src="https://qloron.com/assets/work-4m47bs_I.svg" 
               alt="About Qloron" 
               className="w-full max-w-md h-auto"
             />
