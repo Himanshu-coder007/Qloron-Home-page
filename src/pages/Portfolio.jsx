@@ -71,7 +71,7 @@ const Portfolio = () => {
 
   return (
     <div>
-      <section className="bg-[linear-gradient(to_top,rgba(20,100,160,0.5),rgba(38,214,235,0.2),rgba(38,214,235,0)),url('portfolio.jpg')] bg-cover bg-center bg-no-repeat h-screen w-full flex items-center justify-center px-4">
+      <section className="bg-[linear-gradient(to_top,rgba(20,100,160,0.5),rgba(38,214,235,0.2),rgba(38,214,235,0)),url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg')] bg-cover bg-center bg-no-repeat h-screen w-full flex items-center justify-center px-4">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
