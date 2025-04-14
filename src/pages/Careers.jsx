@@ -2,6 +2,10 @@ import React from 'react';
 import CurrentOpenings from '../components/careers/CurrentOpenings';
 
 const Careers = () => {
+  const handleTrackApplication = () => {
+    window.location.href = 'http://localhost:5173/applications';
+  };
+
   return (
     <div className="bg-white">
       {/* Hero Section with Background Image */}
@@ -52,6 +56,24 @@ const Careers = () => {
 
       {/* Current Openings Section */}
       <CurrentOpenings />
+
+      {/* Track Your Application Section */}
+      <div className="bg-[#F8FAFC] py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6 text-[#017289]">Track Your Application</h2>
+            <p className="text-xl text-gray-700 mb-8">
+              Already applied? Check the status of your application and stay updated on the hiring process.
+            </p>
+            <button
+              onClick={handleTrackApplication}
+              className="bg-[#0FADBC] hover:bg-[#0D9CAA] text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+            >
+              Track Application
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Application Steps Section */}
       <div className="container mx-auto px-4 py-16">

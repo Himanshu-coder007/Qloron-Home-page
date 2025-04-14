@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import JobOpeningCard from './JobOpeningCard';
 
 const CurrentOpenings = () => {
@@ -26,6 +26,19 @@ const CurrentOpenings = () => {
     skills: '',
     resume: null,
   });
+
+  // Fetch user data from localStorage on component mount
+  useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem('user'));
+    if (userData) {
+      setFormData(prev => ({
+        ...prev,
+        name: userData.name || '',
+        personalEmail: userData.email || '',
+        mobile: userData.mobile || '',
+      }));
+    }
+  }, []);
 
   const jobOpenings = [
     {
@@ -225,19 +238,18 @@ const CurrentOpenings = () => {
     setFormStep(1);
     setIsSubmitted(false);
     setErrors({});
-    setFormData({
-      name: '',
+    // Don't reset name, email, and mobile as they're pre-filled from user data
+    setFormData(prev => ({
+      ...prev,
       collegeEmail: '',
-      personalEmail: '',
       address: '',
-      mobile: '',
       college: '',
       qualification: '',
       department: '',
       semester: '',
       skills: '',
       resume: null,
-    });
+    }));
   };
 
   const closeModal = () => {
@@ -280,9 +292,39 @@ const CurrentOpenings = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateStep(3)) {
+      // Create application object
+      const application = {
+        jobId: selectedJob.title,
+        jobTitle: selectedJob.title,
+        jobType: selectedJob.type,
+        jobLocation: selectedJob.location,
+        applicant: {
+          name: formData.name,
+          collegeEmail: formData.collegeEmail,
+          personalEmail: formData.personalEmail,
+          mobile: formData.mobile,
+          address: formData.address,
+          college: formData.college,
+          qualification: formData.qualification,
+          department: formData.department,
+          semester: formData.semester,
+          skills: formData.skills,
+          resume: formData.resume ? formData.resume.name : 'No file',
+        },
+        appliedAt: new Date().toISOString(),
+        status: 'Submitted'
+      };
+
+      // Get existing applications from localStorage or create empty array
+      const existingApplications = JSON.parse(localStorage.getItem('applications')) || [];
+      
+      // Add new application
+      const updatedApplications = [...existingApplications, application];
+      
+      // Save back to localStorage
+      localStorage.setItem('applications', JSON.stringify(updatedApplications));
+      
       setIsSubmitted(true);
-      // Here you would typically send the form data to your backend
-      console.log('Form submitted:', formData);
     }
   };
 

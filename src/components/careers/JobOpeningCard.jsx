@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const JobOpeningCard = ({ title, type, location, experience, description, onViewDetails, onApply }) => {
+  const [hasApplied, setHasApplied] = useState(false);
+
+  useEffect(() => {
+    // Check if user has already applied for this job
+    const applications = JSON.parse(localStorage.getItem('applications')) || [];
+    const userEmail = JSON.parse(localStorage.getItem('user'))?.email;
+    
+    if (userEmail) {
+      const hasAppliedForJob = applications.some(app => 
+        app.jobTitle === title && app.applicant.personalEmail === userEmail
+      );
+      setHasApplied(hasAppliedForJob);
+    }
+  }, [title]);
+
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200">
       <div className="p-6">
@@ -30,12 +45,21 @@ const JobOpeningCard = ({ title, type, location, experience, description, onView
           >
             View Details
           </button>
-          <button
-            onClick={onApply}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 font-medium"
-          >
-            Apply Now
-          </button>
+          {hasApplied ? (
+            <button
+              className="px-4 py-2 bg-green-100 text-green-800 rounded-md font-medium cursor-default"
+              disabled
+            >
+              ✓ Applied
+            </button>
+          ) : (
+            <button
+              onClick={onApply}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 font-medium"
+            >
+              Apply Now
+            </button>
+          )}
         </div>
       </div>
     </div>

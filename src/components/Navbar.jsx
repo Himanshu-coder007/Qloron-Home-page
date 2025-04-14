@@ -4,9 +4,43 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const servicesRef = useRef(null);
   const servicesButtonRef = useRef(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Check login status from localStorage
+    const checkLoginStatus = () => {
+      const userData = localStorage.getItem('user');
+      setIsLoggedIn(!!userData);
+    };
+
+    // Initial check
+    checkLoginStatus();
+
+    // Custom event listener for login/logout actions
+    const handleAuthEvent = () => {
+      checkLoginStatus();
+    };
+
+    // Storage event listener for changes from other tabs
+    const handleStorageChange = (e) => {
+      if (e.key === 'user') {
+        checkLoginStatus();
+      }
+    };
+
+    // Add event listeners
+    window.addEventListener('user-auth', handleAuthEvent);
+    window.addEventListener('storage', handleStorageChange);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('user-auth', handleAuthEvent);
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
 
   const toggleDropdown = (dropdownName) => {
     setOpenDropdown(openDropdown === dropdownName ? null : dropdownName);
@@ -33,6 +67,24 @@ const Navbar = () => {
   const handleNavigation = (path) => {
     navigate(path);
     setOpenDropdown(null);
+  };
+
+  const handleCareersClick = (e) => {
+    const userData = localStorage.getItem('user');
+    if (!userData) {
+      e.preventDefault();
+      navigate('/auth');
+    } else {
+      navigate('/careers');
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    setIsLoggedIn(false);
+    // Dispatch custom event to notify other components
+    window.dispatchEvent(new Event('user-auth'));
+    navigate('/');
   };
 
   return (
@@ -101,13 +153,14 @@ const Navbar = () => {
             <Link to="/contacts">CONTACT US</Link>
           </li>
           <li className="hover:text-cyan-500 cursor-pointer font-medium">
-            <Link to="/careers">CAREERS</Link>
+            <button onClick={handleCareersClick}>CAREERS</button>
           </li>
         </ul>
       </div>
 
       {/* Buttons - Right aligned */}
-      <div className="flex-shrink-0 flex gap-3">
+      <div className="flex-shrink-0 flex gap-3 items-center">
+        {/* Always show SORTBOXS button */}
         <a
           href="https://sortboxs.com/login"
           target="_blank"
@@ -116,6 +169,16 @@ const Navbar = () => {
         >
           SORTBOXS
         </a>
+        
+        {/* Conditionally show LOGOUT button */}
+        {isLoggedIn && (
+          <button
+            onClick={handleLogout}
+            className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-red-600 transition"
+          >
+            LOGOUT
+          </button>
+        )}
       </div>
     </nav>
   );
