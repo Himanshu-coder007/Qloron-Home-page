@@ -3,7 +3,7 @@ import CurrentOpenings from '../components/careers/CurrentOpenings';
 
 const Careers = () => {
   const handleTrackApplication = () => {
-    window.location.href = 'http://localhost:5173/applications';
+    window.location.href = 'https://qloron-home-page-khaki.vercel.app/applications';
   };
 
   return (
