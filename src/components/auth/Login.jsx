@@ -19,19 +19,15 @@ const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
   // Check for saved user data on component mount
   useEffect(() => {
     const savedUser = localStorage.getItem('user');
     if (savedUser) {
-      const { email, username, rememberMe } = JSON.parse(savedUser);
-      if (rememberMe) {
-        setEmail(email);
-        setUsername(username || '');
-        setRememberMe(true);
-      }
+      const { email, username } = JSON.parse(savedUser);
+      setEmail(email);
+      setUsername(username || '');
     }
   }, []);
 
@@ -46,16 +42,11 @@ const Auth = () => {
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
         
-        // Save to local storage if "remember me" is checked
-        if (rememberMe) {
-          localStorage.setItem('user', JSON.stringify({
-            email: user.email,
-            username: user.displayName || username || '',
-            rememberMe: true
-          }));
-        } else {
-          localStorage.removeItem('user');
-        }
+        // Always save to local storage
+        localStorage.setItem('user', JSON.stringify({
+          email: user.email,
+          username: user.displayName || username || ''
+        }));
 
         // Navigate to careers page after successful login
         navigate('/careers');
@@ -76,14 +67,11 @@ const Auth = () => {
           createdAt: new Date()
         });
 
-        // Save to local storage if "remember me" is checked
-        if (rememberMe) {
-          localStorage.setItem('user', JSON.stringify({
-            email: user.email,
-            username: username,
-            rememberMe: true
-          }));
-        }
+        // Always save to local storage
+        localStorage.setItem('user', JSON.stringify({
+          email: user.email,
+          username: username
+        }));
 
         // Navigate to careers page after successful signup
         navigate('/careers');
@@ -242,30 +230,6 @@ const Auth = () => {
                 />
               </div>
             </div>
-
-            {isLogin && (
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
-                    checked={rememberMe}
-                    onChange={(e) => setRememberMe(e.target.checked)}
-                    className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                    Remember me
-                  </label>
-                </div>
-
-                <div className="text-sm">
-                  <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                    Forgot password?
-                  </a>
-                </div>
-              </div>
-            )}
 
             <div>
               <button
