@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import CurrentOpenings from '../components/careers/CurrentOpenings';
 
 const Careers = () => {
+  const navigate = useNavigate();
+
   const handleTrackApplication = () => {
-    window.location.href = 'https://qloron-home-page-khaki.vercel.app/applications';
+    navigate('/applications');
   };
 
   return (
