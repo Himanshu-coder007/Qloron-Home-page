@@ -12,10 +12,12 @@ import Services from './pages/Services';
 import Support from './pages/Support';
 import Login from './components/auth/Login';
 import Applications from './components/careers/Applications';
+import ScrollToTop from './components/ScrollToTop'; 
 
 function App() {
   return (
     <BrowserRouter>
+     <ScrollToTop />
       <Routes>
         <Route path="/" element={<Dashboard />}>
           <Route index element={<Homepage />} />
